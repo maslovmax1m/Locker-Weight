@@ -1,0 +1,51 @@
+#include <iostream>
+#include <cstdlib>
+#include <math.h>
+
+using namespace std;
+           
+int P_DCP = 550;
+int P_DVP = 850;
+int P_WOOD = 500;
+double t1 = 0.005;
+int w1 = 1;
+int h1 = 2;
+double v1 = t1 * w1 * h1;
+double m1 = v1 * P_DVP;
+double t2 = 0.015;
+double w2 = 0.7;
+int h2 = 2;
+double v2 = t2 * w2 * h2;
+double m2 = v2 * P_DCP;
+double t3 = 0.015;
+int h3 = 1;
+double w3 = 0.7;
+double v3 = t3 * w3 * h3;
+double m3 = v3 * P_DCP;
+double t4 = 0.01;
+int h4 = 2;
+double w4 = 0.5;
+double v4 = t4 * w4 * h4;
+double m4 = v4 * P_WOOD;
+double t5 = 0.005;
+int h5 = 1;
+double w5 = 0.7;
+double v5 = t5 * w5 * h5;
+double m5 = v5 * P_DCP;
+double M;
+
+int main()
+{
+	m2 = m2 * 2;
+	m3 = m3 * 2;
+	m4 = m4 * 2;
+	m5 = m5 * 4;
+	M = m1 + m2 + m3 + m4 + m5;
+	cout << "the total weight of the locker is: " << M <<"kg" << endl;
+
+	return 0;
+
+
+
+
+}
